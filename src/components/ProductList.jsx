@@ -1,12 +1,12 @@
 import React from 'react';
-import axios from 'axios';
+import { Link } from '@reach/router'
 
 const ProductList =props =>{
     const {Product}=props
     return(
         <div>
             <p>
-                Title: {Product.Title}
+                Title: <Link to= {`/product/one/${Product._id}`}>{Product.Title}</Link>
                 Price: {Product.Price}
                 Description: {Product.Description}
                 
